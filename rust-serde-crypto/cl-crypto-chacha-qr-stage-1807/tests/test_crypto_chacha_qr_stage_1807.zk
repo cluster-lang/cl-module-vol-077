@@ -1,0 +1,10 @@
+// cl-crypto-chacha-qr-stage-1807: Test Suite
+import "../ccq_1807.zk"
+
+fn test_run():
+    res := chacha_qr_step_1807(1000, 2000)
+    if res != (3000 + 1807) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-crypto-chacha-qr-stage-1807!")

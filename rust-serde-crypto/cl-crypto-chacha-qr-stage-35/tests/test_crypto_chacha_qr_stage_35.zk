@@ -1,0 +1,10 @@
+// cl-crypto-chacha-qr-stage-35: Test Suite
+import "../ccq_35.zk"
+
+fn test_run():
+    res := chacha_qr_step_35(1000, 2000)
+    if res != (3000 + 35) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-crypto-chacha-qr-stage-35!")

@@ -1,0 +1,6 @@
+// cl-regex-dfa-state-stage-8521
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn dfa_step_8521(state: int, ch: int) -> int:
+    return ((state * 31 + ch * 17) ^ 59647) & 16383

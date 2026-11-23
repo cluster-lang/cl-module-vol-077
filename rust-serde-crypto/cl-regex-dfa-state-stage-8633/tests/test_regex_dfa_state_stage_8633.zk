@@ -1,0 +1,11 @@
+// cl-regex-dfa-state-stage-8633: Test Suite
+import "../rds_8633.zk"
+
+fn test_run():
+    res := dfa_step_8633(2, 97) // 'a'
+    let exp: int = ((2 * 31 + 97 * 17) ^ (60431)) & 16383
+    if res != exp: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-regex-dfa-state-stage-8633!")

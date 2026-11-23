@@ -1,0 +1,11 @@
+// cl-regex-dfa-state-stage-6218: Test Suite
+import "../rds_6218.zk"
+
+fn test_run():
+    res := dfa_step_6218(2, 97) // 'a'
+    let exp: int = ((2 * 31 + 97 * 17) ^ (43526)) & 16383
+    if res != exp: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-regex-dfa-state-stage-6218!")

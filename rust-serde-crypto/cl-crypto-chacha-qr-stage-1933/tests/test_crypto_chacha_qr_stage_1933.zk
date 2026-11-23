@@ -1,0 +1,10 @@
+// cl-crypto-chacha-qr-stage-1933: Test Suite
+import "../ccq_1933.zk"
+
+fn test_run():
+    res := chacha_qr_step_1933(1000, 2000)
+    if res != (3000 + 1933) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-crypto-chacha-qr-stage-1933!")

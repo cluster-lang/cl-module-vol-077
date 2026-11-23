@@ -1,0 +1,10 @@
+// cl-crypto-chacha-qr-stage-881: Test Suite
+import "../ccq_881.zk"
+
+fn test_run():
+    res := chacha_qr_step_881(1000, 2000)
+    if res != (3000 + 881) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-crypto-chacha-qr-stage-881!")

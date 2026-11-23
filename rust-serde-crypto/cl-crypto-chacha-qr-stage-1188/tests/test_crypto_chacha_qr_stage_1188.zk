@@ -1,0 +1,10 @@
+// cl-crypto-chacha-qr-stage-1188: Test Suite
+import "../ccq_1188.zk"
+
+fn test_run():
+    res := chacha_qr_step_1188(1000, 2000)
+    if res != (3000 + 1188) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-crypto-chacha-qr-stage-1188!")

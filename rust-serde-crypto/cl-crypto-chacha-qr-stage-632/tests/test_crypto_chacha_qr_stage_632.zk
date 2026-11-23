@@ -1,0 +1,10 @@
+// cl-crypto-chacha-qr-stage-632: Test Suite
+import "../ccq_632.zk"
+
+fn test_run():
+    res := chacha_qr_step_632(1000, 2000)
+    if res != (3000 + 632) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-crypto-chacha-qr-stage-632!")

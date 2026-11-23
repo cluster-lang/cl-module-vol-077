@@ -1,0 +1,7 @@
+// cl-crypto-chacha-qr-stage-686
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn chacha_qr_step_686(a: int, b: int) -> int:
+    let sum_ab: int = (a + b) & 4294967295
+    return (sum_ab + 686) & 2147483647
